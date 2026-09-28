@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro de Atendimentos</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Registro de Atendimentos</h1>
+
+        <p>Registre e consulte os atendimentos realizados.</p>
+
+        <form method="POST">
+
+            <label>Pessoa atendida:</label>
+
+            <select name="pessoa_id" required>
+
+                <option value="">
+                    Selecione uma pessoa
+                </option>
+
+                {% for pessoa in pessoas %}
+
+                <option value="{{ pessoa[0] }}">
+                    {{ pessoa[1] }}
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+            <br><br>
+
+            <label>Data do atendimento:</label>
+
+            <input type="date" name="data" required>
+
+            <br><br>
+
+            <label>Tipo de atendimento:</label>
+
+            <select name="tipo" required>
+
+                <option value="">
+                    Selecione o tipo
+                </option>
+
+                <option value="Orientação">
+                    Orientação
+                </option>
+
+                <option value="Cadastro">
+                    Cadastro
+                </option>
+
+                <option value="Acompanhamento">
+                    Acompanhamento
+                </option>
+
+                <option value="Encaminhamento">
+                    Encaminhamento
+                </option>
+
+                <option value="Outro">
+                    Outro
+                </option>
+
+            </select>
+
+            <br><br>
+
+            <label>Observação:</label>
+
+            <textarea
+                name="observacao"
+                rows="4"></textarea>
+
+            <br><br>
+
+            <button type="submit">
+                Registrar Atendimento
+            </button>
+
+        </form>
+
+        <h2>Histórico de Atendimentos</h2>
+
+        {% if historico %}
+
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>Pessoa</th>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Observação</th>
+            </tr>
+
+            {% for atendimento in historico %}
+
+            <tr>
+
+                <td>{{ atendimento[0] }}</td>
+
+                <td>{{ atendimento[1] }}</td>
+
+                <td>{{ atendimento[2] }}</td>
+
+                <td>{{ atendimento[3] }}</td>
+
+                <td>{{ atendimento[4] }}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+        {% else %}
+
+        <p>Nenhum atendimento registrado ainda.</p>
+
+        {% endif %}
+
+        <a class="voltar" href="/">
+            ← Voltar para o início
+        </a>
+
+    </div>
+
+</body>
+
+</html>

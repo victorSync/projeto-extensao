@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    min-width: 220px;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.numero {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.menu a {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+
+.menu a:hover {
+    background: #1d4ed8;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin: 25px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #15803d;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #2563eb;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.voltar {
+    display: inline-block;
+    margin-top: 25px;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+.menu-link {
+    display: inline-block;
+    margin-top: 10px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.menu-link:hover {
+    background: #1d4ed8;
+}

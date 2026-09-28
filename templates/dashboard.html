@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Dashboard</h1>
+
+        <p>
+            Indicadores básicos do sistema.
+        </p>
+
+        <div class="card-container">
+
+            <div class="card">
+
+                <h3>Total de Pessoas</h3>
+
+                <div class="numero">
+                    {{ total_pessoas }}
+                </div>
+
+                <p>
+                    Pessoas cadastradas
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Total de Atendimentos</h3>
+
+                <div class="numero">
+                    {{ total_atendimentos }}
+                </div>
+
+                <p>
+                    Atendimentos registrados
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Atendimentos no Mês</h3>
+
+                <div class="numero">
+                    {{ atendimentos_mes }}
+                </div>
+
+                <p>
+                    Registros realizados no mês atual
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="menu">
+
+            <a href="/">
+                Início
+            </a>
+
+            <a href="/pessoas">
+                Pessoas
+            </a>
+
+            <a href="/atendimentos">
+                Atendimentos
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

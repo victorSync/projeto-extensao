@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de Pessoas</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Cadastro de Pessoas</h1>
+
+        <p>Cadastre e consulte as pessoas registradas no sistema.</p>
+
+        <form method="POST">
+
+            <label>Nome:</label>
+            <input type="text" name="nome" required>
+
+            <br><br>
+
+            <label>Idade:</label>
+            <input type="number" name="idade">
+
+            <br><br>
+
+            <label>Telefone:</label>
+            <input type="text" name="telefone">
+
+            <br><br>
+
+            <button type="submit">
+                Cadastrar Pessoa
+            </button>
+
+        </form>
+
+        <h2>Pessoas cadastradas</h2>
+
+        {% if pessoas %}
+
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Telefone</th>
+                <th>Data de cadastro</th>
+            </tr>
+
+            {% for pessoa in pessoas %}
+
+            <tr>
+                <td>{{ pessoa[0] }}</td>
+                <td>{{ pessoa[1] }}</td>
+                <td>{{ pessoa[2] }}</td>
+                <td>{{ pessoa[3] }}</td>
+                <td>{{ pessoa[4] }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+        {% else %}
+
+        <p>Nenhuma pessoa cadastrada ainda.</p>
+
+        {% endif %}
+
+        <a class="voltar" href="/">
+            ← Voltar para o início
+        </a>
+
+    </div>
+
+</body>
+
+</html>

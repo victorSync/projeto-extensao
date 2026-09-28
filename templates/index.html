@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Atendimentos</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Sistema de Cadastro e Controle de Atendimentos</h1>
+
+        <p>
+            Sistema web desenvolvido para organizar cadastros,
+            registros de atendimentos e indicadores básicos.
+        </p>
+
+        <div class="card-container">
+
+            <div class="card">
+
+                <h3>Cadastro de Pessoas</h3>
+
+                <p>
+                    Cadastre e consulte as pessoas registradas
+                    no sistema.
+                </p>
+
+                <a class="menu-link" href="/pessoas">
+                    Acessar cadastro
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Registro de Atendimentos</h3>
+
+                <p>
+                    Registre os atendimentos realizados e
+                    consulte o histórico.
+                </p>
+
+                <a class="menu-link" href="/atendimentos">
+                    Acessar atendimentos
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Dashboard</h3>
+
+                <p>
+                    Consulte os principais indicadores
+                    registrados pelo sistema.
+                </p>
+
+                <a class="menu-link" href="/dashboard">
+                    Acessar dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <h2>Sobre o sistema</h2>
+
+        <p>
+            O sistema tem como objetivo centralizar informações
+            de pessoas e atendimentos, facilitando a organização,
+            consulta e acompanhamento dos registros.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
